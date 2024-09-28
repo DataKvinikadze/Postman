@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "d64b8d5a-1556-4a3e-b4b3-cf7c242c87c5",
+		"name": "List of all endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38533685"
+	},
+	"item": [
+		{
+			"name": "List of all objects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/objects",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"objects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single object",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/objects/:id",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"objects",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Object",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"Apple MacBook Pro 16\",\r\n   \"data\": {\r\n      \"year\": 2019,\r\n      \"price\": 1849.99,\r\n      \"CPU model\": \"Intel Core i9\",\r\n      \"Hard disk size\": \"1 TB\"\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/objects",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"objects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update object",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"Apple MacBook Pro 16\",\r\n   \"data\": {\r\n      \"year\": 2019,\r\n      \"price\": 2049.99,\r\n      \"CPU model\": \"Intel Core i9\",\r\n      \"Hard disk size\": \"1 TB\",\r\n      \"color\": \"silver\"\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/objects/:id",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"objects",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "ff80818192336bbf0192348ba8030307"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Partially update object",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"Apple MacBook Pro 16 (Updated Name)\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/objects/:id",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"objects",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "ff80818192336bbf0192348ba8030307"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update object Copy 2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/objects/:id",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"objects",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "ff80818192336bbf0192348ba8030307"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseURL",
+			"value": "https://api.restful-api.dev"
+		}
+	]
+}
